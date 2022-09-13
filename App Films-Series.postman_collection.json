@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "5e243e47-74de-4d47-961f-ea850b9aae90",
+		"name": "App Films/Series",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22690431"
+	},
+	"item": [
+		{
+			"name": "Peticiones Personaje",
+			"item": [
+				{
+					"name": "Listado de Personajes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}characters",
+							"host": [
+								"{{local}}characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Personaje por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}characters/1",
+							"host": [
+								"{{local}}characters"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtro Personaje por Nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}characters?name=Mickey Mouse",
+							"host": [
+								"{{local}}characters"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mickey Mouse"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtro Personaje por edad",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}characters?age=88",
+							"host": [
+								"{{local}}characters"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "88"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peliculas por personaje según id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}characters?idMovie=1",
+							"host": [
+								"{{local}}characters"
+							],
+							"query": [
+								{
+									"key": "idMovie",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir Personaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"nombre\": \"Minnie Moue\",\r\n\"historia\": \"Es un personaje ficticio estadounidense de dibujos animados, de los estudios Walt Disney Pictures. Es la eterna novia de Mickey Mouse \",\r\n\"edad\": 94,\r\n\"peso\": 60.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}characters",
+							"host": [
+								"{{local}}characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar personaje",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"nombre\": \"Minnie Mouse\",\r\n\"historia\": \"Es un personaje ficticio estadounidense de dibujos animados, de los estudios Walt Disney Pictures. Es la novia de Mickey Mouse. Su verdadero nombre es Minerva Mouse y llegó para sustituir a Oswald el Conejo Afortunado.\",\r\n\"edad\": 94,\r\n\"peso\": 60.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}characters/3",
+							"host": [
+								"{{local}}characters"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Personaje",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}characters/4",
+							"host": [
+								"{{local}}characters"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Peticiones Peliculas",
+			"item": [
+				{
+					"name": "Listar Peliculas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies",
+							"host": [
+								"{{local}}movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies/1",
+							"host": [
+								"{{local}}movies"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies?name=Toy Story 1",
+							"host": [
+								"{{local}}movies"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Toy Story 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por genero",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies?idGender=9",
+							"host": [
+								"{{local}}movies"
+							],
+							"query": [
+								{
+									"key": "idGender",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por año",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies?year=1998",
+							"host": [
+								"{{local}}movies"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "1998"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Pelicula",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"titulo\": \"Coco\",\r\n \"anioPublicacion\": 2017,\r\n \"calificacion\": 5,\r\n \"personajes\": [{\r\n  \"nombre\": \"Miguel Rivera\",\r\n\"historia\": \"Miguel Rivera, es el protagonista del largometraje de animación de Disney / Pixar, Coco. Es un niño de 12 años, que se encuentra en el reino de los muertos, durante la fiesta festiva del Día De Los Muertos.\",\r\n\"edad\": 12,\r\n \"peso\": 50\r\n },\r\n {\"nombre\": \"Ernesto De La Cruz\",\r\n\"historia\": \"Ernesto de la Cruz es el villano de la película de Pixar, Coco. Llego a ser el músico más famoso de México pero con traición, cuando Miguel descubre la verdad, De la Cruz ara lo que sea para que nadie se entere.\",\r\n\"edad\": 50,\r\n \"peso\": 70},\r\n {\r\n    \"nombre\": \"Mamá Coco\",\r\n\"historia\": \"Socorro, mejor conocida como Mamá Coco, es un personaje de la película Coco. Es una cálida, apacible y tierna mujer que es la bisabuela de Miguel.\",\r\n\"edad\": 80,\r\n \"peso\": 70 \r\n }\r\n ],\r\n \"generos\": [{\r\n     \"nombre\" : \"Infantil/Aventura\"\r\n }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}movies/",
+							"host": [
+								"{{local}}movies"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Personaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies/14/characters/14",
+							"host": [
+								"{{local}}movies"
+							],
+							"path": [
+								"14",
+								"characters",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"titulo\": \"Coco\",\r\n \"anioPublicacion\": 2017,\r\n \"calificacion\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}movies/14",
+							"host": [
+								"{{local}}movies"
+							],
+							"path": [
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar pelicula",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies/9",
+							"host": [
+								"{{local}}movies"
+							],
+							"path": [
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar personaje de una pelicula",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}movies/1/characters/3",
+							"host": [
+								"{{local}}movies"
+							],
+							"path": [
+								"1",
+								"characters",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Peticiones Series",
+			"item": [
+				{
+					"name": "Listar Series",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series",
+							"host": [
+								"{{local}}series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series/1",
+							"host": [
+								"{{local}}series"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series?name=Los Hechiceros de Waberly Place",
+							"host": [
+								"{{local}}series"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Los Hechiceros de Waberly Place"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Genero",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series?idGender=11",
+							"host": [
+								"{{local}}series"
+							],
+							"query": [
+								{
+									"key": "idGender",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por año",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series?year=2007",
+							"host": [
+								"{{local}}series"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2007"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir Serie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\" : \"Zack y Cody : Gemelos a Bordo\",\r\n    \"anioPublicacion\": 2009,\r\n    \"calificacion\": 3,\r\n    \"personajes\": [{\r\n        \"nombre\": \"Zack Bucker\",\r\n        \"historia\" : \"Gemelo de Cody co-personaje de la serie.\",\r\n        \"edad\" : 16,\r\n        \"peso\" : 50}],\r\n\r\n        \"generos\" : [{\r\n            \"nombre\" : \"Live/Comedia\"\r\n        }]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}series",
+							"host": [
+								"{{local}}series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir personaje a Serie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series/4/characters/15",
+							"host": [
+								"{{local}}series"
+							],
+							"path": [
+								"4",
+								"characters",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Serie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\" : \"Los Hechiceros de Waberly Place de viaje\",\r\n    \"anioPublicacion\" : 2010,\r\n    \"calificacion\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}series/2",
+							"host": [
+								"{{local}}series"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Serie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series/1",
+							"host": [
+								"{{local}}series"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Personaje de una serie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}series/3/characters/16",
+							"host": [
+								"{{local}}series"
+							],
+							"path": [
+								"3",
+								"characters",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Peticiones Genero",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Terror/Animacion\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}gender",
+							"host": [
+								"{{local}}gender"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login & Register",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usernameOrEmail\" : \"admin\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}auth/login",
+							"host": [
+								"{{local}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"DevJava\",\r\n    \"name\" : \"Guido Molina\",\r\n    \"password\" : \"admin\",\r\n    \"email\" : \"guidoMolina@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}auth/register",
+							"host": [
+								"{{local}}auth"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
