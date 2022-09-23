@@ -1,5 +1,5 @@
 <h2  align="center"> API PELICULAS/SERIES DISNEY :european_castle: </h2>
-<p> - API REST basada en productos de stream de disney realizada con el lenjuaje java.</p>
+<p> - API REST basada en productos de stream de disney realizada con el lenguaje java.</p>
 
 ## Descripción funcional :page_facing_up:
 
